@@ -20,7 +20,7 @@ export const emitGameNotification = (payload: GameNotificationPayload) => {
   listeners.forEach((listener) => listener(payload));
 };
 
-const subscribe = (listener: Listener) => {
+export const subscribe = (listener: Listener) => {
   listeners.add(listener);
   return () => listeners.delete(listener);
 };
